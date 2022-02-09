@@ -1,0 +1,15 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "scripts": {
+    "sksqlapi-03-build-tests": "tsc -p tsconfig_tests.json",
+    "sksqlapi-04-run-tests": "node build/main.js"
+  },
+  "dependencies": {
+    "sksqlapi": "file:.."
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.5",
+    "node-fetch": "^2.6.7"
+  }
+}
