@@ -15,7 +15,7 @@ const apiKey = "6d8d9194-ae47-4b26-91b3-02a9d988929e"
 
 createDatabase(apiKey,
     "",
-    "dbTest",
+    "test22222",
     "http://localhost:30100/api/v1/createDatabase").then((dbHashId) => {
     console.log(dbHashId);
 
@@ -30,9 +30,9 @@ createDatabase(apiKey,
 
             listDatabases(apiKey, "http://localhost:30100/api/v1/listDatabases").then((value: TDatabaseList) => {
                 console.log("Deleting dBHashId: " + dbHashId);
-                deleteDatabase(apiKey, dbHashId, "http://localhost:30100/api/v1/deleteDatabase").then((v) => {
-                    console.log("Result: " + v);
-                })
+                //deleteDatabase(apiKey, dbHashId, "http://localhost:30100/api/v1/deleteDatabase").then((v) => {
+//                    console.log("Result: " + v);
+//                })
 
             });
 
