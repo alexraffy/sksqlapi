@@ -20,7 +20,7 @@ export function createDatabase(apiKey: string,
             body: JSON.stringify(payload),
             headers: {'Content-Type': 'application/json'}
         }).then((value: Response) => {
-            
+
             value.json().then((json) => {
                 resolve(json.dbHashId);
             }).catch ((err) => {
