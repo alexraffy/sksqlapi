@@ -7,3 +7,4 @@ ts.config.json
 webpack.config.js
 .idea
 *.map
+*.tgz

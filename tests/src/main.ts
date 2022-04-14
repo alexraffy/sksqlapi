@@ -9,14 +9,13 @@ if (!globalThis.fetch) {
 }
 
 
-const apiKey = "6d8d9194-ae47-4b26-91b3-02a9d988929e"
+const apiKey = "..."
 
 
 
 createDatabase(apiKey,
     "",
-    "test22222",
-    "http://localhost:30100/api/v1/createDatabase").then((dbHashId) => {
+    "TestDB").then((dbHashId) => {
     console.log(dbHashId);
 
     createConnectionToken(apiKey,
@@ -24,17 +23,9 @@ createDatabase(apiKey,
         dbHashId,
         kRights.write,
         60,
-        "testConnection",
-        "http://localhost:30100/api/v1/createConnectionToken").then((token: string) => {
+        "testConnection").then((token: string) => {
             console.log("token is: " + token);
 
-            listDatabases(apiKey, "http://localhost:30100/api/v1/listDatabases").then((value: TDatabaseList) => {
-                console.log("Deleting dBHashId: " + dbHashId);
-                //deleteDatabase(apiKey, dbHashId, "http://localhost:30100/api/v1/deleteDatabase").then((v) => {
-//                    console.log("Result: " + v);
-//                })
-
-            });
 
 
         }).catch((error) => {
