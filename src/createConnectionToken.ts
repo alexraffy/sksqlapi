@@ -26,11 +26,19 @@ export function createConnectionToken(apiKey: string,
             body: JSON.stringify(payload),
             headers: {'Content-Type': 'application/json'}
         }).then((value: Response) => {
-            value.json().then((json) => {
-                resolve(json.token);
-            }).catch ((err) => {
-                reject(err);
-            })
+            try {
+                value.json().then((json) => {
+                    if (json.valid === true) {
+                        resolve(json.token);
+                    } else {
+                        reject({error: "invalid"});
+                    }
+                }).catch((err) => {
+                    reject(err);
+                })
+            } catch (e) {
+                reject(e);
+            }
         }).catch ((reason) => {
             reject(reason);
         })

@@ -1,6 +1,6 @@
 {
   "name": "sksqlapi",
-  "version": "1.0.8",
+  "version": "1.0.22",
   "description": "API for sksql.com",
   "author": {
     "name": "ARaffy"

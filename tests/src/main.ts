@@ -1,4 +1,4 @@
-import {createConnectionToken, createDatabase, deleteDatabase, kRights, listDatabases, TDatabaseList} from "sksqlapi";
+import {createConnectionToken, createDatabase, databaseInfo, kRights} from "sksqlapi";
 import fetch from 'node-fetch';
 
 if (!globalThis.fetch) {
@@ -9,8 +9,9 @@ if (!globalThis.fetch) {
 }
 
 
-const apiKey = "..."
 
+
+const apiKey = '';
 
 
 createDatabase(apiKey,
@@ -39,3 +40,4 @@ createDatabase(apiKey,
     console.dir(r);
 
 });
+
