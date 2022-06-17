@@ -10,6 +10,5 @@ export interface TDatabaseList {
         encrypted: boolean;
         name: string;
         live: boolean;
-        users: number;
     }[];
 }
