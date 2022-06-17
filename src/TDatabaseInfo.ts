@@ -8,6 +8,7 @@ export interface TDatabaseInfo {
     optionalName?: string;
     live?: boolean;
     connections?: number;
+    size?: number;
     tokens?: { token: string; validity: string }[];
     workers?: { address:string, isRelay: boolean, readOnly: boolean, status: string, heartbeat: string, connections: number}[];
     backupsInfo?: {filename: string, date: string, size: number}[];

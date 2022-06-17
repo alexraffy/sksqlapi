@@ -4,6 +4,7 @@
 
 export interface TDatabaseList {
     valid: boolean;
+    numDatabases: number;
     databases: {
         dbHashId: string;
         created: string;
